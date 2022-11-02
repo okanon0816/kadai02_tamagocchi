@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tamagocchi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="img/べびっち.png" alt="" class="tamagocchi" id="babicchi" onclick="count">
+    <img src="img/たまっち.png" alt="" class="tamagocchi" id="tamacchi">
+    <img src="img/くちぱっち.png" alt="" class="tamagocchi" id="kuchibashicchi">
+
+    <div class="food">
+        <button type="button" class="btn" id="gohanbtn" >ごはん</button>
+        <button type="button" class="btn" id="oyatsubtn" >おやつ</button>
+    </div>
+
+    <div class="play">
+        <button type="button" class="btn" id="codebtn" >こーど をかく</button>
+        <button type="button" class="btn" id="suiminbtn" >すいみん</button>
+    </div>
+
+    <div class="start">
+        <button type="button" class="btn" id="btnStart">おせわを はじめる</button>
+    </div>
+
+    <div class="pala">
+        <ul>
+            <li>ごはん<span id="liGohan">0</span>回</li>
+            <li>おやつ</li><span id="liOyatsu">0</span>回</li>
+            <li>こーど</li><span id="liCode">0</span>回</li>
+            <li>すいみん</li><span id="liSuimin">0</span>回</li>
+        </ul>
+    </div>
+
+    <div id="textArea">
+        テキストテキストテキストテキスト
+    </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
