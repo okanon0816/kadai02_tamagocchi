@@ -66,3 +66,61 @@
 //     btn.value = btnName + cutArray[num]++;
 //     // console.log(btn.value);
 // }
+
+let gohanPt =""; //ごはんを食べるを選択した回数の箱
+let oyatsuPt =""; //おやつを食べるを選択した回数の箱
+let codePt =""; //コードをかくを選択した回数の箱
+let SuiminPt =""; //すいみんを選択した回数の箱
+
+//ごはんのクリック回数のカウントを関数で定義
+let gohanCount =function(){
+$("#gohanbtn").on("click",function(){
+    $("#liGohan").html(gohanPt+1);
+    gohanPt++
+    // return console.log(gohanPt ,"ごはんボタンを押した回数")
+    return gohanPt;
+})};
+
+// gohanCount();
+
+
+//おやつのクリック回数のカウントを関数で定義
+let oyatsuCount = function(){
+$("#oyatsubtn").on("click",function(){
+    $("#liOyatsu").html(oyatsuPt+1);
+    oyatsuPt++
+    return console.log(oyatsuPt,"おやつボタンを押した回数")
+})};
+
+oyatsuCount();
+
+//コードのクリック回数のカウントを関数で定義
+let codeCount = function(){
+$("#codebtn").on("click",function(){
+    $("#liCode").html(codePt+1);
+    codePt++
+    // return console.log(codePt,"コードボタンを押した回数")
+    return codePt
+})};
+
+// codeCount();
+
+//すいみんのクリック回数
+let suiminCount = function(){
+$("#suiminbtn").on("click",function(){
+    $("#liSuimin").html(SuiminPt+1);
+    SuiminPt++
+    return console.log(SuiminPt,"すいみんボタンを押した回数");
+})};
+
+// suiminCount();
+
+//クリックカウントによって処理を分岐
+let clickCount="";
+// $(".btn").on("click",function(){
+//     clickCount++
+//     if(clickCount==1){
+//         console.log("1dayo");
+//     }
+// })
+

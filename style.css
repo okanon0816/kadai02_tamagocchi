@@ -1,4 +1,185 @@
-.tamagocchi {
-    width:200px;
+@charset "UTF-8";
+
+html {
+    font-size: 1.25rem;
+}
+
+body {
+    color: #432;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    background: url(img/bg-img.jpg);
+    position: relative;
+    z-index: -10;
+}
+
+img {
+    max-width: 100%;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* コンテンツを消す */
+.addclass {
     display: none;
+}
+
+/* スタート画面の指定 */
+#opening {
+    background-image: linear-gradient(90deg, rgba(115, 248, 224, 1), rgba(150, 167, 241, 1)); ;
+    height: 100vh;
+}
+
+.opnening_content_wrapper {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+#btnStart  {
+    border: 2px solid gray;
+    padding: 10px 20px;
+    background-color: white;
+    position: relative;
+    top: 200px;
+}
+
+.title {
+    /* display: block; */
+    text-align: center;
+    position : relative;
+    top: 20vh;
+    box-sizing: border-box;
+    letter-spacing: 1rem;
+    font-size: 3rem;
+}
+
+.opening_animation {
+    position: relative;
+    left: 300px;
+    top: 100px;
+    animation: 10s fuwafuwa infinite;
+}
+
+/* 宇宙船のふわふわアニメーション */
+@keyframes fuwafuwa {
+    0%, 100% {
+    transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-50px);
+    }
+
+    70% {
+    transform: translateX(130px);
+    }
+}
+
+/* メイン画面 */
+.main {
+    background-image: url(img/gsakademy01.png);
+    background-size: cover;
+    height: 100vh;
+}
+
+.main::before{
+    content: "";
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* z-index: -5; */
+}
+
+#mainContainer {
+    height: 80vh;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+
+.tamagocchi {
+    width: 200px;
+    animation: 10s walk infinite;
+}
+
+#osozakicchi {
+    width:150px;
+}
+
+/* たまごっちたちの動きアニメーション */
+@keyframes walk {
+    0% {
+        transform: translateX(-200px);
+    }
+    50% {
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translateX(-200px);
+    }
+}
+
+.btn_area {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn {
+    border:2px solid gray;
+    padding: 5px 30px;
+    background-color: white;
+    margin-right: 30px;
+}
+
+/* テキストエリア */
+#textArea {
+    background-color: black;
+    border: 1px solid gray;
+    width: 800px;
+    padding: 20px;
+    margin: auto;
+}
+
+#textArea,p {
+    color: white;
+    
+}
+
+/* パラメーター */
+.pala {
+    background-color: rgb(219, 218, 218);
+    display: block;
+    width: 200px;
+    position:relative;
+    left: 840px;
+    top: 15px;
+}
+
+/* コマンド */
+.command {
+    width: 80px;
+    position: relative;
+    right: 400px;
+    bottom:200px;
+    animation-name: fall;
+    animation-duration: 1s;
+    animation-fill-mode:forwards;
+}
+
+/* アイテムおちる動きアニメーション */
+@keyframes fall {
+    0% {
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(200px);
+    }
 }
